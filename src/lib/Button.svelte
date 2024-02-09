@@ -1,6 +1,6 @@
 <script lang="ts">
   import DynamicButton from "$lib/DynamicButton.svelte";
-  import { IButtonTheme, IDynamicButtonProps } from "$lib/DynamicButton.props.js";
+  import type { IButtonTheme, IDynamicButtonProps } from "$lib/DynamicButton.props";
 
   export type ThemeType = 'primary' | 'secondary';
   export type VariantType = 'contained' | 'simple';
