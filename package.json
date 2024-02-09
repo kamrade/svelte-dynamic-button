@@ -1,6 +1,10 @@
 {
 	"name": "@mmlq/svelte-dynamic-button",
 	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kamrade/svelte-dynamic-button"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
