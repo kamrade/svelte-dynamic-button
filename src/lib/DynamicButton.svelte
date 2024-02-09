@@ -1,15 +1,24 @@
 <script lang="ts">
-  import type { IDynamicButtonProps, IButtonTheme } from './DynamicButton.props';
-  export let onClick: (e: MouseEvent<HTMLButtonElement>) => void = null;
 
-  export let props: IDynamicButtonProps;
-  export let themes: IButtonTheme;
+  export let onClick: (e: MouseEvent) => void;
+  export let theme: string;
+  export let variant: string;
 
-  console.log(props);
-  console.log(themes);
+  console.log(theme);
+  console.log(variant);
 
 </script>
 
-<button on:click={onClick}>
+<button on:click={onClick} class={`MagicButton theme-${theme} variant-${variant}`}>
   <slot/>
 </button>
+
+<style>
+  .MagicButton {
+    position: relative;
+  }
+
+  .MagicStuff {
+    position: relative;
+  }
+</style>
