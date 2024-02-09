@@ -1,4 +1,3 @@
 // Reexport your entry components here
-export * from './Button.svelte';
-export * from './DynamicButton.svelte';
-export * from './Container.svelte';
+export * from './components/Button.svelte';
+export * from './kit/DynamicButton.svelte';

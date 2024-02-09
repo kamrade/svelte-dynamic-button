@@ -1,0 +1,74 @@
+:global(.MagicButton.MagicButton--size--sm) {
+  --paddingY: 2px;
+  --paddingX: 8px;
+  --innerGap: 2px;
+  --fontSize: 12px;
+  --lineHeight: 1.5;
+  --borderWidth: 1px;
+}
+:global(.MagicButton.MagicButton--size--md) {
+  --paddingY: 4px;
+  --paddingX: 12px;
+  --innerGap: 4px;
+  --fontSize: 14px;
+  --lineHeight: 1.5;
+  --borderWidth: 1px;
+}
+:global(.MagicButton.MagicButton--size--lg) {
+  --paddingY: 8px;
+  --paddingX: 12px;
+  --innerGap: 5px;
+  --fontSize: 14px;
+  --lineHeight: 1.5;
+  --borderWidth: 1px;
+}
+
+:global(.MagicButton.MagicButton--theme--primary.MagicButton--variant--text) {
+  --background: transparent;
+  --hoverBackground: #E7F6FF;
+  --activeBackground: #DBF1FF;
+  --borderColor: transparent;
+  --color: #1983BF;
+  --focusColor: #7ED1FF;
+}
+:global(.MagicButton.MagicButton--theme--primary.MagicButton--variant--contained) {
+  --background: #34B0F6;
+  --hoverBackground: #24A4EC;
+  --activeBackground: #1D9BE3;
+  --borderColor: transparent;
+  --color: #ffffff;
+  --focusColor: #7ED1FF;
+}
+:global(.MagicButton.MagicButton--theme--primary.MagicButton--variant--outlined) {
+  --background: transparent;
+  --hoverBackground: #E7F6FF;
+  --activeBackground: #DBF1FF;
+  --borderColor: #7ED1FF;
+  --color: #1983BF;
+  --focusColor: #7ED1FF;
+}
+
+:global(.MagicButton.MagicButton--theme--secondary.MagicButton--variant--text) {
+  --background: transparent;
+  --hoverBackground: #F3F6F8;
+  --activeBackground: #EBEEF0;
+  --borderColor: transparent;
+  --color: #272D34;
+  --focusColor: #7ED1FF;
+}
+:global(.MagicButton.MagicButton--theme--secondary.MagicButton--variant--contained) {
+  --background: #F3F6F8;
+  --hoverBackground: #EBEEF0;
+  --activeBackground: #E3E6E8;
+  --borderColor: #E3E6E8;
+  --color: #272D34;
+  --focusColor: #7ED1FF;
+}
+:global(.MagicButton.MagicButton--theme--secondary.MagicButton--variant--outlined) {
+  --background: transparent;
+  --hoverBackground: #F3F6F8;
+  --activeBackground: #EBEEF0;
+  --borderColor: #C1CAD0;
+  --color: #272D34;
+  --focusColor: #7ED1FF;
+}
