@@ -4,7 +4,7 @@
   export let variant: string;
   export let size: string;
   export let shape: string;
-  export let mainClassName: string;
+  export let className: string = 'MagicButton';
   export let block: boolean = false;
   export let disabled: boolean = false;
   export let convex: boolean = false;
@@ -14,17 +14,17 @@
     `DynamicButton ` +
     (convex ? `DynamicButton--convex ` : '') +
     (loading ? `DynamicButton--loading ` : '') +
-    `${mainClassName} ` +
-    `${mainClassName}--theme--${theme} ` +
-    `${mainClassName}--variant--${variant} ` +
-    `${mainClassName}--size--${size} ` +
-    `${mainClassName}--shape--${shape} ` +
+    `${className} ` +
+    `${className}--theme--${theme} ` +
+    `${className}--variant--${variant} ` +
+    `${className}--size--${size} ` +
+    `${className}--shape--${shape} ` +
     (block ? `DynamicButton--block ` : '');
 
   // console.log($$props);
 </script>
 
-<button on:click={onClick} class={buttonClassName} {disabled}>
+<button on:click={onClick} class={buttonClassName} {disabled} {...$$restProps}>
   <span class="DynamicButtonContent">
     {#if $$slots.prefix}
       <span class="DynamicButton--prefixIconContent">
