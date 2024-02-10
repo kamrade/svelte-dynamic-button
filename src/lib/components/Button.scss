@@ -23,6 +23,14 @@
   --borderWidth: 1px;
 }
 
+:global(.MagicButton.MagicButton--shape--straight) {
+  --borderRadius: 0;
+}
+
+:global(.MagicButton.MagicButton--shape--rounded) {
+  --borderRadius: 6px;
+}
+
 :global(.MagicButton.MagicButton--theme--primary.MagicButton--variant--text) {
   --background: transparent;
   --hoverBackground: #E7F6FF;
