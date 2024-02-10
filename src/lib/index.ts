@@ -1,3 +1,5 @@
 // Reexport your entry components here
-export * as Button from './components/Button.svelte';
-export * as DynamicButton from './kit/DynamicButton.svelte';
+import Button from './components/Button.svelte';
+import DynamicButton from './kit/DynamicButton.svelte';
+
+export { Button, DynamicButton };
