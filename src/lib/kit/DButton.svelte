@@ -1,14 +1,22 @@
 <script lang="ts">
-  export let onClick: (e: MouseEvent) => void = (_e) => {};
-  export let theme: string;
-  export let variant: string;
-  export let size: string;
-  export let shape: string;
-  export let className: string = 'MagicButton';
-  export let block: boolean = false;
-  export let disabled: boolean = false;
-  export let convex: boolean = false;
-  export let loading: boolean = false;
+  interface ISimpleButtonProps {
+    className?: string;
+    theme?: string;
+    variant?: string;
+    size?: string;
+    shape?: string;
+    block?: boolean;
+    disabled?: boolean;
+    convex?: boolean;
+    loading?: boolean;
+    onClick?: (e: MouseEvent) => void;
+  }
+
+  export let props: ISimpleButtonProps = {};
+
+  console.log(props);
+
+  let { theme, variant, size, shape, className, block, disabled, convex, loading, onClick } = props;
 
   let buttonClassName =
     `DynamicButton ` +
@@ -20,8 +28,6 @@
     `${className}--size--${size} ` +
     `${className}--shape--${shape} ` +
     (block ? `DynamicButton--block ` : '');
-
-  // console.log($$props);
 </script>
 
 <button on:click={onClick} class={buttonClassName} disabled={disabled || loading} {...$$restProps}>

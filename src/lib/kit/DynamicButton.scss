@@ -83,7 +83,7 @@ $disabledOpacity: .5;
       width: 100%;
       background-color: var(--background);
       border-radius: var(--borderRadius);
-      border: var(--borderWidth) solid var(--borderColor);
+      // border: var(--borderWidth) solid var(--borderColor);
 
       .DynamicButton--spinner {
         display: block;
