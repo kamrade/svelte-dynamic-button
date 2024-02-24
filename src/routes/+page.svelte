@@ -5,22 +5,16 @@
 
   let isLoading = true;
   const toggleLoad = () => (isLoading = !isLoading);
-
-  const getProps = () => ({
-    loading: isLoading
-  });
-
   let props = {};
-
-  $: props = { loading: isLoading };
+  $: props = { ...props, loading: isLoading };
 </script>
 
 <div class="container">
   <h1>Dynamic Button Component</h1>
 
   <div style="margin-bottom: 1rem">
-    <Btn {props}>Simple button</Btn>
-    <Btn props={{ onClick: toggleLoad }}>Toggle single button</Btn>
+    <Btn props={{ ...props }}>Simple button</Btn>
+    <Btn props={{ theme: 'primary', onClick: toggleLoad }}>Toggle single button</Btn>
   </div>
 
   <div style="margin-bottom: 1rem; font-size: 20px; color: red;">
@@ -35,11 +29,8 @@
       Dynamic Button with Icon
     </Button>
 
-    <Button loading={isLoading} disabled theme="primary" variant="contained"
-      >Dynamic Button 2</Button
-    >
-    <Button onClick={toggleLoad} convex theme="primary" variant="contained">Dynamic Button 3</Button
-    >
+    <Button loading={isLoading} theme="primary" variant="contained">Dynamic Button 2</Button>
+    <Button onClick={toggleLoad} convex theme="primary" variant="contained">Toggle</Button>
   </div>
 
   <div style="margin-bottom: 1rem">

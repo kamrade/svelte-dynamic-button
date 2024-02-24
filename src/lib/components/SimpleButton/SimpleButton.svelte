@@ -1,49 +1,22 @@
 <script lang="ts">
-  import type { SizeType, ThemeType, VariantType, ShapeType } from './SimpleButton.js';
-  import { mainClassName } from './SimpleButton.js';
-  import DButton from '$lib/kit/DButton.svelte';
-
-  interface ISimpleButtonProps {
-    className?: string;
-    theme?: ThemeType;
-    variant?: VariantType;
-    size?: SizeType;
-    shape?: ShapeType;
-    block?: boolean;
-    disabled?: boolean;
-    convex?: boolean;
-    loading?: boolean;
-    onClick?: (e: MouseEvent) => void;
-  }
-
+  import type { ISimpleButtonProps } from './SimpleButton.js';
+  import { mergeProps } from './SimpleButton.js';
+  import { defaultProps } from './SimpleButton.defaults.js';
+  import DynamicButton from '$lib/kit/DynamicButton.svelte';
   export let props: ISimpleButtonProps = {};
 
-  let defaultProps: ISimpleButtonProps = {
-    className: mainClassName,
-    theme: 'secondary',
-    variant: 'contained',
-    size: 'sm',
-    shape: 'straight',
-    block: false,
-    disabled: false,
-    convex: false,
-    loading: false
-  };
-
-  let innerProps = {
-    ...defaultProps,
-    ...props
-  };
+  let innerProps: ISimpleButtonProps;
+  $: innerProps = mergeProps(defaultProps, props);
 </script>
 
-<DButton props={innerProps} {...$$restProps}>
+<DynamicButton props={{ ...innerProps }} {...$$restProps}>
   <svelte:fragment slot="prefix">
     <slot name="prefix" />
   </svelte:fragment>
   <svelte:fragment slot="default">
     <slot />
   </svelte:fragment>
-</DButton>
+</DynamicButton>
 
 <style lang="scss">
   @import './SimpleButton.scss';

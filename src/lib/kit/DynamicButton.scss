@@ -70,6 +70,10 @@ $disabledOpacity: .5;
     opacity: $disabledOpacity;
   }
 
+  .DynamicButton--loader {
+    display: none;
+  }
+
   &.DynamicButton--loading {
     .DynamicButton--loader {
       display: flex;

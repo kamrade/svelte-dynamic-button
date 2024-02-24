@@ -1,30 +1,38 @@
 <script lang="ts">
+  import { getClassNames } from './DynamicButton.js';
+  import type { IDButtonProps } from './DynamicButton.js';
+
+  export let props: IDButtonProps | null = null;
+
   export let onClick: (e: MouseEvent) => void = (_e) => {};
-  export let theme: string;
-  export let variant: string;
-  export let size: string;
-  export let shape: string;
-  export let className: string = 'MagicButton';
+  export let theme: string = '';
+  export let variant: string = '';
+  export let size: string = '';
+  export let shape: string = '';
+  export let className: string = 'DynamicButton';
   export let block: boolean = false;
   export let disabled: boolean = false;
   export let convex: boolean = false;
   export let loading: boolean = false;
 
-  let buttonClassName =
-    `DynamicButton ` +
-    (convex ? `DynamicButton--convex ` : '') +
-    (loading ? `DynamicButton--loading ` : '') +
-    `${className} ` +
-    `${className}--theme--${theme} ` +
-    `${className}--variant--${variant} ` +
-    `${className}--size--${size} ` +
-    `${className}--shape--${shape} ` +
-    (block ? `DynamicButton--block ` : '');
+  // inner variables
+  let isLoading: boolean | undefined = false;
+  let clickHandler: ((e: MouseEvent) => void) | undefined = (_e) => {};
+  let isDisabled: boolean | undefined = false;
 
-  // console.log($$props);
+  let buttonClassName = '';
+  $: {
+    buttonClassName = props
+      ? getClassNames(props)
+      : (buttonClassName = getClassNames({ theme, variant, size, shape, className, block, convex, loading }));
+
+    isLoading = props ? props.loading : loading;
+    clickHandler = props ? props.onClick : onClick;
+    isDisabled = props ? props.disabled : disabled;
+  }
 </script>
 
-<button on:click={onClick} class={buttonClassName} disabled={disabled || loading} {...$$restProps}>
+<button on:click={clickHandler} class={buttonClassName} disabled={isDisabled || isLoading} {...$$restProps}>
   <span class="DynamicButtonContent">
     {#if $$slots.prefix}
       <span class="DynamicButton--prefixIconContent">
@@ -38,7 +46,7 @@
       </span>
     {/if}
   </span>
-  {#if loading}
+  {#if isLoading}
     <span class="DynamicButton--loader">
       <span class="DynamicButton--spinner" />
     </span>
