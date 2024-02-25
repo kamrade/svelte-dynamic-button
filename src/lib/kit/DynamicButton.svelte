@@ -26,7 +26,7 @@
   $: {
     buttonClassName = props
       ? getClassNames(props)
-      : (buttonClassName = getClassNames({ theme, variant, size, shape, className, block, convex, loading }));
+      : getClassNames({ theme, variant, size, shape, className, block, convex, loading });
 
     isLoading = props ? props.loading : loading;
     clickHandler = props ? props.onClick : onClick;
