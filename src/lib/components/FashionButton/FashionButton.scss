@@ -1,0 +1,28 @@
+:global(.DynamicButton.FashionButton) {
+  --paddingY: 4px;
+  --paddingX: 12px;
+  --innerGap: 5px;
+  --fontSize: 14px;
+  --lineHeight: 1.5;
+  --borderWidth: 2px;
+
+  --borderRadius: 0;
+
+  --background: #fff;
+  --hoverBackground: #EFEE48;
+  --activeBackground: #DEDD41;
+  
+  --borderColor: #EFEE48;
+  --hoverBorderColor: #EFEE48;
+  --activeBorderColor: #DEDD41;
+  
+  --color: #000;
+  // --hoverColor: #fff;
+  // --activeColor: #fff;
+  --focusColor: #DEDD4140;
+
+  --disabledOpacity: 0.5;
+  --disabledColor: #777;
+  --disabledBackgroundColor: #eee ;
+  --disabledBorderColor: transparent;
+}

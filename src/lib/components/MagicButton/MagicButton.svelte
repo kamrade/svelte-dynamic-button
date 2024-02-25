@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { SizeType, ThemeType, VariantType, ShapeType } from './Button.js';
-  import { mainClassName } from './Button.js';
+  import type { SizeType, ThemeType, VariantType, ShapeType } from './MagicButton.js';
+  import { mainClassName } from './MagicButton.js';
   import DynamicButton from '$lib/kit/DynamicButton.svelte';
 
   export let className: string = mainClassName;
@@ -37,5 +37,5 @@
 </DynamicButton>
 
 <style>
-  @import './Button.scss';
+  @import './MagicButton.scss';
 </style>

@@ -1,6 +1,7 @@
 <script lang="ts">
-  import Button from '$lib/components/MagicButton/Button.svelte';
+  import Button from '$lib/components/MagicButton/MagicButton.svelte';
   import Btn from '$lib/components/SimpleButton/SimpleButton.svelte';
+  import FashionButton from '$lib/components/FashionButton/FashionButton.svelte';
   const clickHandler = () => console.log('click');
 
   let isLoading = true;
@@ -11,6 +12,15 @@
 
 <div class="container">
   <h1>Dynamic Button Component</h1>
+
+  <div style="margin-bottom: 2rem;">
+    <FashionButton style="cursor: pointer;">
+      <i class="ri-admin-line" slot="prefix" />
+      Fashion Button
+    </FashionButton>
+    <FashionButton props={{ loading: isLoading }} style="cursor: pointer;">Fashion Button</FashionButton>
+    <FashionButton props={{ disabled: isLoading }} style="cursor: pointer;">Disabled Fashion Button</FashionButton>
+  </div>
 
   <div style="margin-bottom: 1rem">
     <Btn props={{ ...props }}>Simple button</Btn>

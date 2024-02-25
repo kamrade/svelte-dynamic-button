@@ -1,6 +1,15 @@
-$disabledOpacity: .5;
-
 .DynamicButton {
+  --hoverC: var(--hoverColor, var(--color));
+  --activeC: var(--activeColor, var(--color));
+  
+  --hoverBorder: var(--hoverBorderColor, var(--borderColor));
+  --activeBorder: var(--activeBorderColor, var(--borderColor));
+
+  --disabledC: var(--disabledColor, var(--color));
+  --disabledBg: var(--disabledBackgroundColor, var(--background));
+  --disabledBorderC: var(--disabledBorderColor, var(--borderColor));
+
+  --disabledOp: var(--disabledOpacity, 1);
   --convexShadow: inset 2px 2px 2px 0 rgba(255, 255, 255, .15),
       inset -2px 2px 2px 0 rgba(255, 255, 255, .15),
       inset 2px -2px 2px 0 rgba(255, 255, 255, .15),
@@ -24,7 +33,7 @@ $disabledOpacity: .5;
     inset 0 -1px 2px 0 rgba(0, 0, 0, .1),
     0 0 0 3px rgba(86, 180, 231, .2);
 
-  --focusShadow: 0 0 0 3px rgba(86, 180, 231, .2);
+  --focusShadow: 0 0 0 3px var(--focusColor);
 }
 
 .DynamicButton {
@@ -47,13 +56,18 @@ $disabledOpacity: .5;
   border-radius: var(--borderRadius);
 
   transition: all .2s ease-in-out;
+  box-sizing: border-box;
 
   &:not(:disabled):hover {
     background: var(--hoverBackground);
+    color: var(--hoverC);
+    border-color: var(--hoverBorder);
   }
 
   &:not(:disabled):active {
     background: var(--activeBackground);
+    color: var(--activeC);
+    border-color: var(--activeBorder);
   }
 
   &:not(:active):focus {
@@ -67,7 +81,10 @@ $disabledOpacity: .5;
   }
 
   &:disabled {
-    opacity: $disabledOpacity;
+    opacity: var(--disabledOp);
+    color: var(--disabledC);
+    background-color: var(--disabledBg);
+    border-color: var(--disabledBorderC);
   }
 
   .DynamicButton--loader {
@@ -75,6 +92,9 @@ $disabledOpacity: .5;
   }
 
   &.DynamicButton--loading {
+    .DynamicButtonContent {
+      opacity: 0;
+    }
     .DynamicButton--loader {
       display: flex;
       align-items: center;
@@ -85,16 +105,18 @@ $disabledOpacity: .5;
       right: 0;
       bottom: 0;
       width: 100%;
-      background-color: var(--background);
+      background-color: var(--disabledBackgroundColor);
       border-radius: var(--borderRadius);
       // border: var(--borderWidth) solid var(--borderColor);
 
       .DynamicButton--spinner {
         display: block;
-        width: 1em;
-        height: 1em;
-        border-left: 2px dotted var(--color);
-        border-top: 2px dotted var(--color);
+        width: 0.75em;
+        height: 0.75em;
+        border: 2px solid transparent;
+        border-bottom-color: var(--color);
+        border-left-color: var(--color);
+        border-top-color: var(--color);
         border-radius: 50%;
         animation: spin 1.5s linear infinite;
       }

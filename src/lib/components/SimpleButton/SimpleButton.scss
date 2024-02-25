@@ -1,3 +1,7 @@
+:global(.SimpleButton) {
+  --disabledOpacity: 0.5;
+}
+
 :global(.SimpleButton.SimpleButton--size--sm) {
   --paddingY: 2px;
   --paddingX: 8px;
@@ -30,6 +34,7 @@
   --activeBackground: #1D9BE3;
   --borderColor: transparent;
   --color: #ffffff;
+  --hoverColor: #ffffff;
   --focusColor: #7ED1FF;
 }
 
@@ -39,6 +44,7 @@
   --activeBackground: #DBF1FF;
   --borderColor: #7ED1FF;
   --color: #1983BF;
+  --hoverColor: #1983BF;
   --focusColor: #7ED1FF;
 }
 
@@ -48,6 +54,7 @@
   --activeBackground: #E3E6E8;
   --borderColor: #E3E6E8;
   --color: #272D34;
+  --hoverColor: #272D34;
   --focusColor: #7ED1FF;
 }
 
@@ -57,5 +64,6 @@
   --activeBackground: #EBEEF0;
   --borderColor: #C1CAD0;
   --color: #272D34;
+  --hoverColor: #272D34;
   --focusColor: #7ED1FF;
 }

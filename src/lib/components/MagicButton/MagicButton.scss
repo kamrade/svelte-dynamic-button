@@ -1,3 +1,7 @@
+:global(.MagicButton) {
+  --disabledOpacity: 0.5;
+}
+
 :global(.MagicButton.MagicButton--size--sm) {
   --paddingY: 2px;
   --paddingX: 8px;

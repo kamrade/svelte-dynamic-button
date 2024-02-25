@@ -6,3 +6,15 @@ You can find usage examples (MagicButton and SimpleButton components) in the rep
 ```bash
 npm i -S @kamrade/svelte-dynamic-button
 ```
+
+### ToDo List
+
+- [x] --hoverBorderColor
+- [x] --activeBorderColor
+- [x] --hoverColor (text)
+- [x] --activeColor (text)
+- [x] --disabledColor
+- [x] --disabledBackgroundColor
+- [x] --disabledBorderColor
+- [ ] Better preloader
+- [ ] Custom preloader
