@@ -9,13 +9,11 @@
   $: innerProps = mergeProps(defaultProps, props);
 </script>
 
-<DynamicButton props={{ ...innerProps }} {...$$restProps}>
-  <svelte:fragment slot="prefix">
-    <slot name="prefix" />
-  </svelte:fragment>
-  <svelte:fragment slot="default">
-    <slot />
-  </svelte:fragment>
+<DynamicButton props={{ ...innerProps }} {...$$restProps} customLoader={$$slots.loader}>
+  <slot name="prefix" slot="prefix" />
+  <slot name="suffix" slot="suffix" />
+  <slot />
+  <slot name="loader" slot="loader" />
 </DynamicButton>
 
 <style lang="scss">

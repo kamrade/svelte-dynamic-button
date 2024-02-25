@@ -14,8 +14,17 @@
   <h1>Dynamic Button Component</h1>
 
   <div style="margin-bottom: 2rem;">
+    <FashionButton props={{ loading: isLoading }} style="cursor: pointer;">
+      <i class="ri-inbox-fill" slot="prefix" />
+      <i class="ri-mail-fill" slot="suffix" />
+      Custom Preloader
+      <span slot="loader">Loading</span>
+    </FashionButton>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
     <FashionButton style="cursor: pointer;">
-      <i class="ri-admin-line" slot="prefix" />
+      <i class="ri-inbox-fill" slot="prefix" />
       Fashion Button
     </FashionButton>
     <FashionButton props={{ loading: isLoading }} style="cursor: pointer;">Fashion Button</FashionButton>
@@ -48,18 +57,27 @@
       <i class="ri-arrow-left-up-line" slot="prefix" />
       Dynamic Secondary Button 1</Button
     >
-    <Button theme="secondary" variant="contained">Dynamic Secondary Button 2</Button>
+    <Button theme="secondary" variant="contained">
+      <i class="ri-chat-4-fill" slot="prefix" />
+      Dynamic Secondary Button 2</Button
+    >
     <Button theme="secondary" variant="outlined">Dynamic Secondary Button 3</Button>
   </div>
 
   <div style="margin-bottom: 1rem">
-    <Button convex size="sm" theme="primary" variant="text">Dynamic Secondary Button 1</Button>
+    <Button convex size="sm" theme="primary" variant="text">
+      <i class="ri-mail-fill" slot="suffix" />
+      Dynamic Secondary Button 1
+    </Button>
     <Button convex size="sm" theme="primary" variant="contained">Dynamic Secondary Button 2</Button>
     <Button convex size="sm" theme="primary" variant="outlined">Dynamic Secondary Button 3</Button>
   </div>
 
   <div style="margin-bottom: 1rem">
-    <Button theme="primary" variant="contained" block>Dynamic Button 2</Button>
+    <Button theme="primary" variant="contained" block>
+      Dynamic Button 2
+      <i class="ri-mail-fill" slot="suffix" />
+    </Button>
   </div>
 </div>
 

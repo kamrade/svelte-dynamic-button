@@ -10,12 +10,9 @@
 </script>
 
 <DynamicButton props={{ ...innerProps }} {...$$restProps}>
-  <svelte:fragment slot="prefix">
-    <slot name="prefix" />
-  </svelte:fragment>
-  <svelte:fragment slot="default">
-    <slot />
-  </svelte:fragment>
+  <slot name="prefix" slot="prefix" />
+  <slot name="suffix" slot="suffix" />
+  <slot />
 </DynamicButton>
 
 <style lang="scss">

@@ -15,6 +15,8 @@
   export let convex: boolean = false;
   export let loading: boolean = false;
 
+  export let customLoader = false;
+
   // inner variables
   let isLoading: boolean | undefined = false;
   let clickHandler: ((e: MouseEvent) => void) | undefined = (_e) => {};
@@ -45,10 +47,21 @@
         <slot />
       </span>
     {/if}
+
+    {#if $$slots.suffix}
+      <span class="DynamicButton--suffixIconContent">
+        <slot name="suffix" />
+      </span>
+    {/if}
   </span>
+
   {#if isLoading}
     <span class="DynamicButton--loader">
-      <span class="DynamicButton--spinner" />
+      {#if customLoader}
+        <slot name="loader" />
+      {:else}
+        <span class="DynamicButton--spinner" />
+      {/if}
     </span>
   {/if}
 </button>

@@ -16,5 +16,6 @@ npm i -S @kamrade/svelte-dynamic-button
 - [x] --disabledColor
 - [x] --disabledBackgroundColor
 - [x] --disabledBorderColor
-- [ ] Better preloader
-- [ ] Custom preloader
+- [x] Better preloader
+- [x] Custom preloader
+- [ ] Better way to provide Custom Preloader

@@ -28,12 +28,9 @@
   {onClick}
   {...$$restProps}
 >
-  <svelte:fragment slot="prefix">
-    <slot name="prefix" />
-  </svelte:fragment>
-  <svelte:fragment slot="default">
-    <slot />
-  </svelte:fragment>
+  <slot slot="prefix" name="prefix" />
+  <slot slot="suffix" name="suffix" />
+  <slot />
 </DynamicButton>
 
 <style>
