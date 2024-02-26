@@ -19,3 +19,6 @@ npm i -S @kamrade/svelte-dynamic-button
 - [x] Better preloader
 - [x] Custom preloader
 - [ ] Better way to provide Custom Preloader
+- [ ] Check both way to provide props
+- [ ] InlineFlex button content
+- [ ] LineHeight for prefix and suffix icons
