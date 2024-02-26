@@ -132,10 +132,6 @@
         transform: translateY(0.5px);
       }
 
-      .DynamicButton--prefixIcon,
-      .DynamicButton--suffixIcon {
-        transform: translateY(0.5px);
-      }
     }
 
     &:not(:active):focus {
@@ -190,17 +186,11 @@
   //   }
   // }
 
-  .DynamicButton--prefixIcon,
-  .DynamicButton--suffixIcon {
-    position: relative;
-    display: block;
-    transition: all .1s ease-in-out;
 
-    .DynamicButton--prefixIconContent,
-    .DynamicButton--suffixIconContent {
-      line-height: 0;
-      vertical-align: 0.125em;
-    }
+  .DynamicButton--prefixIconContent,
+  .DynamicButton--suffixIconContent {
+    line-height: 0;
+    // vertical-align: 0.125em;
   }
 
   .DynamicButtonContent {
