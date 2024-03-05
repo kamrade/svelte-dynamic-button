@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import Button from '$lib/components/MagicButton/MagicButton.svelte';
   import Btn from '$lib/components/SimpleButton/SimpleButton.svelte';
   import FashionButton from '$lib/components/FashionButton/FashionButton.svelte';
@@ -8,6 +9,11 @@
   const toggleLoad = () => (isLoading = !isLoading);
   let props = {};
   $: props = { ...props, loading: isLoading };
+
+  let focus: () => unknown;
+  onMount(() => {
+    focus();
+  });
 </script>
 
 <div class="container">
@@ -29,6 +35,13 @@
     </FashionButton>
     <FashionButton props={{ loading: isLoading }} style="cursor: pointer;">Fashion Button</FashionButton>
     <FashionButton props={{ disabled: isLoading }} style="cursor: pointer;">Disabled Fashion Button</FashionButton>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <FashionButton style="cursor: pointer;" bind:buttonFocus={focus}>
+      <i class="ri-inbox-fill" slot="prefix" />
+      Fashion Button
+    </FashionButton>
   </div>
 
   <div style="margin-bottom: 1rem">

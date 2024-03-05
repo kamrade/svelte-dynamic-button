@@ -17,6 +17,10 @@
 
   export let customLoader = false;
 
+  let buttonEl: HTMLButtonElement;
+
+  export const focus = () => buttonEl.focus();
+
   // inner variables
   let isLoading: boolean | undefined = false;
   let clickHandler: ((e: MouseEvent) => void) | undefined = (_e) => {};
@@ -34,7 +38,13 @@
   }
 </script>
 
-<button on:click={clickHandler} class={buttonClassName} disabled={isDisabled || isLoading} {...$$restProps}>
+<button
+  bind:this={buttonEl}
+  on:click={clickHandler}
+  class={buttonClassName}
+  disabled={isDisabled || isLoading}
+  {...$$restProps}
+>
   <span class="DynamicButtonContent">
     {#if $$slots.prefix}
       <span class="DynamicButton--prefixIconContent">

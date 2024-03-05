@@ -5,11 +5,13 @@
   import DynamicButton from '$lib/kit/DynamicButton.svelte';
   export let props: ISimpleButtonProps = {};
 
+  export let buttonFocus: () => unknown = () => {};
+
   let innerProps: ISimpleButtonProps;
   $: innerProps = mergeProps(defaultProps, props);
 </script>
 
-<DynamicButton props={{ ...innerProps }} {...$$restProps} customLoader={$$slots.loader}>
+<DynamicButton bind:focus={buttonFocus} props={{ ...innerProps }} {...$$restProps} customLoader={$$slots.loader}>
   <slot name="prefix" slot="prefix" />
   <slot name="suffix" slot="suffix" />
   <slot />
