@@ -1,6 +1,6 @@
 <script lang="ts">
   import { getClassNames } from './DynamicButton.js';
-  import type { IDButtonProps } from './DynamicButton.js';
+  import type { IDButtonProps, ButtonType } from './DynamicButton.js';
 
   export let props: IDButtonProps | null = null;
 
@@ -16,6 +16,10 @@
   export let loading: boolean = false;
 
   export let customLoader = false;
+
+  export let type: ButtonType = 'button';
+  export let name: string = '';
+  export let value: string = '';
 
   let buttonEl: HTMLButtonElement;
 
@@ -43,26 +47,23 @@
   on:click={clickHandler}
   class={buttonClassName}
   disabled={isDisabled || isLoading}
+  {type} {name} {value}
   {...$$restProps}
 >
-  <span class="DynamicButtonContent">
-    {#if $$slots.prefix}
-      <span class="DynamicButton--prefixIconContent">
-        <slot name="prefix" />
-      </span>
-    {/if}
+  <span class="DynamicButtonContent" >
+    
+    <span class="DynamicButton--prefixIconContent" style="display: contents;">
+      <slot name="prefix" />
+    </span>
 
-    {#if $$slots.default}
-      <span class={`DynamicButton--content`}>
-        <slot />
-      </span>
-    {/if}
+    <span class={`DynamicButton--content`} style="display: contents;">
+      <slot />
+    </span>
 
-    {#if $$slots.suffix}
-      <span class="DynamicButton--suffixIconContent">
-        <slot name="suffix" />
-      </span>
-    {/if}
+    <span class="DynamicButton--suffixIconContent" style="display: contents;">
+      <slot name="suffix" />
+    </span>
+
   </span>
 
   {#if isLoading}

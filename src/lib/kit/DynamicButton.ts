@@ -1,3 +1,5 @@
+export type ButtonType = 'button' | 'submit' | 'reset';
+
 export interface IDButtonProps {
   className?: string;
   theme?: string;
@@ -9,6 +11,10 @@ export interface IDButtonProps {
   convex?: boolean;
   loading?: boolean;
   onClick?: (e: MouseEvent) => void;
+
+  type?: ButtonType;
+  name?: string;
+  value?: string;
 }
 
 export const getClassNames = (props: IDButtonProps) => {

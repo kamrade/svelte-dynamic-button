@@ -33,7 +33,7 @@
     inset 0 -1px 2px 0 rgba(0, 0, 0, .1),
     0 0 0 3px rgba(86, 180, 231, .2);
 
-  --focusShadow: 0 0 0 3px var(--focusColor);
+  --focusShadow: 0 0 0 2px var(--focusColor);
 }
 
 .DynamicButton {
@@ -72,7 +72,19 @@
   }
 
   &:not(:active):focus {
-    box-shadow: var(--focusShadow);
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      left: -4px;
+      right: -4px;
+      z-index: 0;
+      opacity: .75;
+      border-radius: calc(var(--borderRadius) + 2px);
+      box-shadow: var(--focusShadow);
+    }
+    // box-shadow: var(--focusShadow);
   }
 
   &.DynamicButton--block {
@@ -190,16 +202,23 @@
 
   .DynamicButton--prefixIconContent,
   .DynamicButton--suffixIconContent {
-    line-height: 0;
-    // vertical-align: 0.125em;
+    line-height: 1em;
+
+    &:empty {
+      display: none;
+    }
   }
 
   .DynamicButtonContent {
     position: relative;
     transition: all .1s ease-in-out;
-    display: block;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: baseline;
     text-align: center;
     flex-grow: 1;
+    gap: .5em;
   }
 
 }

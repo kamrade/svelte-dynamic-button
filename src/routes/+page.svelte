@@ -1,7 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import Button from '$lib/components/MagicButton/MagicButton.svelte';
-  import FashionButton from '$lib/components/FashionButton/FashionButton.svelte';
   import Btn from '$lib/components/SimpleButton/SimpleButton.svelte';
 </script>
 
@@ -14,65 +11,48 @@
 <div class="container">
   <h2>Simple default small</h2>
 
-  <Btn props={{
-    size: 'sm'
-  }}>Simple button bold</Btn>
+  <Btn props={{ disabled: true, size: 'sm' }}>
+    <i class="ri-inbox-fill" slot="prefix" />
+    <b>Simple button bold</b>
+  </Btn>
 
-  <Btn props={{
-    size: 'sm'
-  }}>Simple button</Btn>
+  <Btn props={{ size: 'sm' }}>
+    <b>Simple button</b>
+  </Btn>
 
-  <Btn props={{
-    size: 'sm',
-    variant: 'outlined'
-  }}>Simple outlined button</Btn>
+  <Btn props={{ variant: 'outlined', size: 'sm' }}>
+    <b>Simple outlined button</b>
+  </Btn>
 
-</div>
-
-
-
-<div class="container">
-  <h2>Simple primary large</h2>
-
-  <Btn props={{
-    size: 'lg',
-    theme: 'primary'
-  }}><i class="ri-inbox-fill" slot="prefix" /><b>Simple primary contained button</b></Btn>
-
-  <Btn props={{
-    size: 'lg'
-  }}><b>Simple button bold</b></Btn>
-
-  <Btn props={{
-    size: 'lg',
-    theme: 'primary',
-    variant: 'outlined'
-  }}><b>Simple button</b></Btn>
+  <Btn props={{ theme: 'primary', size: 'sm' }}>
+    <i class="ri-arrow-right-fill" slot="suffix" />
+    <b>Main action</b>
+  </Btn>
 
 </div>
 
 
 
 <div class="container">
-  <h2>Simple primary large</h2>
+  <h2>Simple default small</h2>
 
-  <Btn props={{
-    size: 'lg',
-    theme: 'primary',
-    shape: 'straight'
-  }}>Simple primary contained button</Btn>
+  <Btn props={{ disabled: true }}>
+    <i class="ri-inbox-fill" slot="prefix" />
+    <b>Simple button bold</b>
+  </Btn>
 
-  <Btn props={{
-    size: 'lg',
-    shape: 'straight'
-  }}>Simple button bold</Btn>
+  <Btn props={{}}>
+    <b>Simple button</b>
+  </Btn>
 
-  <Btn props={{
-    size: 'lg',
-    theme: 'primary',
-    variant: 'outlined',
-    shape: 'straight'
-  }}>Simple button</Btn>
+  <Btn props={{ variant: 'outlined' }}>
+    <b>Simple outlined button</b>
+  </Btn>
+
+  <Btn props={{ theme: 'primary' }}>
+    <i class="ri-arrow-right-fill" slot="suffix" />
+    <b>Main action</b>
+  </Btn>
 
 </div>
 
