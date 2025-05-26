@@ -56,6 +56,21 @@
 
 </div>
 
+
+
+<div class="container">
+  <h2>Large button</h2>
+
+  <Btn props={{ size: 'xl', theme: 'primary', variant: 'outlined' }}>
+    <b>XLarge Button</b>
+  </Btn>
+  <Btn props={{ size: 'xl', theme: 'primary', variant: 'contained' }}>
+    <b>XLarge Button</b>
+  </Btn>
+
+</div>
+
+
 <style>
   .container {
     max-width: 800px;

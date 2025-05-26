@@ -23,6 +23,16 @@
   --borderWidth: 2px;
 }
 
+// XL
+:global(.SimpleButton.SimpleButton--size--xl) {
+  --paddingY: 12px;
+  --paddingX: 16px;
+  --innerGap: 7px;
+  --fontSize: 16px;
+  --lineHeight: 24px;
+  --borderWidth: 2px;
+}
+
 // Straight
 :global(.SimpleButton.SimpleButton--shape--straight) {
   --borderRadius: 0;
@@ -35,24 +45,24 @@
 
 // Primary contained
 :global(.SimpleButton.SimpleButton--theme--primary.SimpleButton--variant--contained) {
-  --background: #34B0F6;
-  --hoverBackground: #24A4EC;
-  --activeBackground: #1D9BE3;
+  --background: #FFCC13;
+  --hoverBackground: #eebc0e;
+  --activeBackground: #e1b308;
   --borderColor: transparent;
-  --color: #ffffff;
-  --hoverColor: #ffffff;
-  --focusColor: #7ED1FF;
+  --color: #26272B;
+  --hoverColor: #26272B;
+  --focusColor: #e1b308;
 }
 
 // Primary outlined
 :global(.SimpleButton.SimpleButton--theme--primary.SimpleButton--variant--outlined) {
   --background: transparent;
-  --hoverBackground: #E7F6FF;
-  --activeBackground: #DBF1FF;
-  --borderColor: #7ED1FF;
-  --color: #1983BF;
-  --hoverColor: #1983BF;
-  --focusColor: #7ED1FF;
+  --hoverBackground: #f8f1d6;
+  --activeBackground: #f7ebba;
+  --borderColor: #FFCC13;
+  --color: #26272B;
+  --hoverColor: #26272B;
+  --focusColor: #fbd13c;
 }
 
 // Secondary contained
