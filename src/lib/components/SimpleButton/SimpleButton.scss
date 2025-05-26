@@ -1,16 +1,19 @@
+// Basic
 :global(.SimpleButton) {
   --disabledOpacity: 0.5;
 }
 
+// Small
 :global(.SimpleButton.SimpleButton--size--sm) {
-  --paddingY: 2px;
-  --paddingX: 8px;
+  --paddingY: 4px;
+  --paddingX: 12px;
   --innerGap: 2px;
   --fontSize: 12px;
   --lineHeight: 1.5;
   --borderWidth: 2px;
 }
 
+// Large
 :global(.SimpleButton.SimpleButton--size--lg) {
   --paddingY: 8px;
   --paddingX: 12px;
@@ -20,14 +23,17 @@
   --borderWidth: 2px;
 }
 
+// Straight
 :global(.SimpleButton.SimpleButton--shape--straight) {
   --borderRadius: 0;
 }
 
+// Rounded
 :global(.SimpleButton.SimpleButton--shape--rounded) {
   --borderRadius: 12px;
 }
 
+// Primary contained
 :global(.SimpleButton.SimpleButton--theme--primary.SimpleButton--variant--contained) {
   --background: #34B0F6;
   --hoverBackground: #24A4EC;
@@ -38,6 +44,7 @@
   --focusColor: #7ED1FF;
 }
 
+// Primary outlined
 :global(.SimpleButton.SimpleButton--theme--primary.SimpleButton--variant--outlined) {
   --background: transparent;
   --hoverBackground: #E7F6FF;
@@ -48,6 +55,7 @@
   --focusColor: #7ED1FF;
 }
 
+// Secondary contained
 :global(.SimpleButton.SimpleButton--theme--secondary.SimpleButton--variant--contained) {
   --background: #F3F6F8;
   --hoverBackground: #EBEEF0;
@@ -58,6 +66,7 @@
   --focusColor: #7ED1FF;
 }
 
+// Secondary outlined
 :global(.SimpleButton.SimpleButton--theme--secondary.SimpleButton--variant--outlined) {
   --background: transparent;
   --hoverBackground: #F3F6F8;

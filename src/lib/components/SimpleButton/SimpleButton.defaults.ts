@@ -1,12 +1,12 @@
 import { mainClassName } from "./SimpleButton.js";
 import type { ISimpleButtonProps } from "./SimpleButton.js";
 
-export let defaultProps: ISimpleButtonProps = {
+export const defaultProps: ISimpleButtonProps = {
   className: mainClassName,
   theme: 'secondary',
   variant: 'contained',
-  size: 'sm',
-  shape: 'straight',
+  size: 'lg',
+  shape: 'rounded',
   block: false,
   disabled: false,
   convex: false,
