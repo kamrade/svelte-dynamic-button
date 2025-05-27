@@ -9,6 +9,18 @@
 
 
 <div class="container">
+  <h2>Icon Button</h2>
+  <Btn props={{ iconButton: true }}>
+    <i class="ri-inbox-fill" slot="prefix" />
+    <i class="ri-inbox-fill" slot="suffix" />
+  </Btn>
+  <Btn props={{ iconButton: true, loading: true }}>
+    <i class="ri-inbox-fill" slot="prefix" />
+  </Btn>
+</div>
+
+
+<div class="container">
   <h2>Simple default small</h2>
 
   <Btn props={{ disabled: true, size: 'sm' }}>
@@ -61,6 +73,9 @@
 <div class="container">
   <h2>Large button</h2>
 
+  <Btn props={{ size: 'xl', theme: 'primary', variant: 'outlined', iconButton: true }}>
+    <i class="ri-arrow-right-fill" slot="prefix" />
+  </Btn>
   <Btn props={{ size: 'xl', theme: 'primary', variant: 'outlined' }}>
     <b>XLarge Button</b>
   </Btn>

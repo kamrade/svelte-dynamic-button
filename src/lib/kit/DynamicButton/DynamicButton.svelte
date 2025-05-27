@@ -2,6 +2,10 @@
   import { getClassNames } from './DynamicButton.js';
   import type { IDButtonProps, ButtonType } from './DynamicButton.js';
 
+  /*
+  // Можно передавать параметры двумя спопсобами 
+  // Через props объектом или по одному
+  */
   export let props: IDButtonProps | null = null;
 
   export let onClick: (e: MouseEvent) => void = (_e) => {};
@@ -14,6 +18,7 @@
   export let disabled: boolean = false;
   export let convex: boolean = false;
   export let loading: boolean = false;
+  export let iconButton = false;
 
   export let customLoader = false;
 
@@ -29,17 +34,23 @@
   let isLoading: boolean | undefined = false;
   let clickHandler: ((e: MouseEvent) => void) | undefined = (_e) => {};
   let isDisabled: boolean | undefined = false;
+  let isIconButton: boolean | undefined = false;
 
   let buttonClassName = '';
   $: {
-    buttonClassName = props
-      ? getClassNames(props)
-      : getClassNames({ theme, variant, size, shape, className, block, convex, loading });
 
+    isIconButton = props ? props.iconButton : iconButton;
     isLoading = props ? props.loading : loading;
     clickHandler = props ? props.onClick : onClick;
     isDisabled = props ? props.disabled : disabled;
+
+    buttonClassName = props
+      ? getClassNames(props)
+      : getClassNames({ theme, variant, size, shape, className, block, convex, loading, iconButton });
+
+    
   }
+
 </script>
 
 <button
@@ -56,11 +67,11 @@
       <slot name="prefix" />
     </span>
 
-    <span class={`DynamicButton--content`} style="display: contents;">
+    <span class={`DynamicButton--content`} style={`display: ${(isIconButton) ? 'none' : 'contents'};`}>
       <slot />
     </span>
 
-    <span class="DynamicButton--suffixIconContent" style="display: contents;">
+    <span class="DynamicButton--suffixIconContent" style={`display: ${(isIconButton) ? 'none' : 'contents'};`}>
       <slot name="suffix" />
     </span>
 

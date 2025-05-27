@@ -10,5 +10,6 @@ export const defaultProps: ISimpleButtonProps = {
   block: false,
   disabled: false,
   convex: false,
-  loading: false
+  loading: false,
+  iconButton: false
 };

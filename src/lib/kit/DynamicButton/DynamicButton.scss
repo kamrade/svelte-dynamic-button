@@ -156,49 +156,6 @@
     }
   }
 
-  // &.DynamicButton--focusFrame {
-
-  //   &:not(:active):focus {
-
-  //     &::before,
-  //     &::after {
-  //       opacity: 1;
-  //     }
-  //   }
-
-  //   &::before {
-  //     content: '';
-  //     position: absolute;
-  //     z-index: -1;
-  //     top: var(--focusBorderOffset);
-  //     left: var(--focusBorderOffset);
-  //     bottom: var(--focusBorderOffset);
-  //     border-radius: var(--focusBorderRadius) 0 0 var(--focusBorderRadius);
-  //     width: var(--focusHeight);
-  //     border: 2px solid var(--focusColor);
-  //     border-right-color: transparent;
-  //     transition: all .3s ease-in-out;
-  //     opacity: 0;
-  //     clip-path: polygon(0% 0%, var(--cutRight) 0%, var(--cutRight) 100%, 0% 100%);
-  //   }
-
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     z-index: -1;
-  //     bottom: var(--focusBorderOffset);
-  //     right: var(--focusBorderOffset);
-  //     top: var(--focusBorderOffset);
-  //     border-radius: 0 var(--focusBorderRadius) var(--focusBorderRadius) 0;
-  //     width: var(--focusHeight);
-  //     border: 2px solid var(--focusColor);
-  //     border-left-color: transparent;
-  //     transition: all .3s ease-in-out;
-  //     opacity: 0;
-  //     clip-path: polygon(var(--cutLeft) 0%, 100% 0%, 100% 100%, var(--cutLeft) 100%);
-  //   }
-  // }
-
 
   .DynamicButton--prefixIconContent,
   .DynamicButton--suffixIconContent {

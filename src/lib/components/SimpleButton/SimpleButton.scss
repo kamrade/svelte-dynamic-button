@@ -13,6 +13,11 @@
   --borderWidth: 2px;
 }
 
+:global(.SimpleButton.SimpleButton--size--sm.DynamicButton--icon) {
+  --paddingY: 12px;
+  --paddingX: 12px;
+}
+
 // Large
 :global(.SimpleButton.SimpleButton--size--lg) {
   --paddingY: 8px;
@@ -23,6 +28,11 @@
   --borderWidth: 2px;
 }
 
+:global(.SimpleButton.SimpleButton--size--lg.DynamicButton--icon) {
+  --paddingY: 12px;
+  --paddingX: 12px;
+}
+
 // XL
 :global(.SimpleButton.SimpleButton--size--xl) {
   --paddingY: 12px;
@@ -31,6 +41,11 @@
   --fontSize: 16px;
   --lineHeight: 24px;
   --borderWidth: 2px;
+}
+
+:global(.SimpleButton.SimpleButton--size--xl.DynamicButton--icon) {
+  --paddingY: 16px;
+  --paddingX: 16px;
 }
 
 // Straight

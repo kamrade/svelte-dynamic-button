@@ -18,6 +18,8 @@ export interface ISimpleButtonProps extends IDButtonProps {
   convex?: boolean;
   loading?: boolean;
   onClick?: (e: MouseEvent) => void;
+
+  iconButton?: boolean;
 }
 
 export const mergeProps = (defaultProps: ISimpleButtonProps, props: ISimpleButtonProps) => ({
