@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { SizeType, ThemeType, VariantType, ShapeType } from './MagicButton.js';
   import { mainClassName } from './MagicButton.js';
-  import DynamicButton from '$lib/kit/DynamicButton.svelte';
+  import { DynamicButton } from '$lib/index.js';
 
   export let className: string = mainClassName;
   export let theme: ThemeType = 'secondary';

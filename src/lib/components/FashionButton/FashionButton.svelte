@@ -2,7 +2,7 @@
   import type { ISimpleButtonProps } from './FashionButton.js';
   import { mergeProps } from './FashionButton.js';
   import { defaultProps } from './FashionButton.defaults.js';
-  import DynamicButton from '$lib/kit/DynamicButton.svelte';
+  import { DynamicButton } from '$lib/index.js';
   export let props: ISimpleButtonProps = {};
 
   export let buttonFocus: () => unknown = () => {};

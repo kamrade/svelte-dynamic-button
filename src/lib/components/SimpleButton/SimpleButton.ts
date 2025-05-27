@@ -1,4 +1,4 @@
-import { type IDButtonProps } from '../../kit/DynamicButton.js';
+import { type IDButtonProps } from '../../kit/DynamicButton/DynamicButton.js';
 
 export type ThemeType = 'primary' | 'secondary';
 export type VariantType = 'contained' | 'outlined';

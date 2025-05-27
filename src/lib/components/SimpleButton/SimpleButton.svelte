@@ -2,7 +2,7 @@
   import type { ISimpleButtonProps } from './SimpleButton.js';
   import { mergeProps } from './SimpleButton.js';
   import { defaultProps } from './SimpleButton.defaults.js';
-  import DynamicButton from '$lib/kit/DynamicButton.svelte';
+  import { DynamicButton } from '$lib/index.js';
   export let props: ISimpleButtonProps = {};
 
   let innerProps: ISimpleButtonProps;
