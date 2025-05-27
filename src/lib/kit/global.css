@@ -1,0 +1,70 @@
+:root {
+
+  /* BG */
+  --bg-base: #fff;
+  --bg-base-100: #F0F2F5;
+  --bg-base-200: #e5e6ea;
+  --bg-base-300: #dadbde;
+
+  --bg-control-100: #ffffff;
+  --bg-control-200: #f5f5f5;
+  --bg-control-300: #e9e9e9;
+  --bg-control-400: #e1e1e1;
+
+  --bg-inv-100: #26272B;
+
+  --bg-success-100: #6ce392;
+
+  --bg-danger-100: #f39188;
+
+  --bg-emphasis-100: #FFCC13;
+  --bg-emphasis-200: #eebc0e;
+  --bg-emphasis-300: #e1b308;
+
+  --bg-accent-100: #D921F9;
+
+  --bg-backdrop: rgba(0,0,0,0.8);
+
+  --brand-gradient-vertical: linear-gradient(90deg, rgba(32,86,228,1) 0%, rgba(252,32,190,1) 50%, rgba(253,203,76,1) 100%);
+
+  /* TEXT */
+  --text-base-100: #26272B;
+  --text-muted-100: #515256;
+  --text-placeholder-100: #9c9ea3;
+  --text-inv-100: #fff;
+  --text-inv-muted-100: #C1C3CA;
+  --text-emphasis-100: #FFCC13;
+  --text-accent-100: #802bac;
+  --text-accent-200: #5c1b7e;
+
+  /* LINE */
+  --line-control-100: #ababb0;
+  --line-control-focus: #e9e9e9;
+  --line-base-100: #E3E5EB;
+  --line-emphasis-100: #FFCC13;
+  --line-focus-100: #26272B;
+
+  /* ICON */
+  --icon-base-100: #26272B;
+  --icon-inv-100: #FFFFFF;
+}
+
+:root {
+  --border-radius-panel: 12px;
+  --border-radius-panel-inner: 8px;
+  --border-radius-control: 9px;
+  --border-radius-control-sm: 5px;
+  --border-radius-dropdown: 9px;
+  --border-radius-modal: 20px;
+
+  --zindex-dropdown: 1060;
+  --zindex-sticky: 1020;
+  --zindex-fixed: 1030;
+  --zindex-offcanvas-backdrop: 1040;
+  --zindex-offcanvas: 1045;
+  --zindex-modal-backdrop: 1050;
+  --zindex-modal: 1055;
+  --zindex-popover: 1070;
+  --zindex-tooltip: 1080;
+  --zindex-toast: 1090;
+}

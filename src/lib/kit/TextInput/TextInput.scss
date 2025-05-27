@@ -1,0 +1,146 @@
+$border-radius-default: var(--border-radius-control);
+
+$background-contained: var(--bg-control-200);
+$background-text-input-element: transparent;
+
+$border-control-focus: var(--line-control-focus);
+$border-underline: #ccc;
+$border-underline-active: var(--line-control-focus);
+$border-underline-focus: $border-underline-active;
+$border-contained: transparent;
+$background-contained-focus: var(--bg-control-100);
+
+$text-color-label: var(--text-muted-100);
+$text-color-placeholder: var(--text-placeholder-100);
+
+.TextInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  line-height: 0;
+  gap: 0.5rem;
+  width: 100%;
+
+  // Sizing for all
+  &.TextInput-size-md {
+    .TextInput-label {
+      padding: .5rem 0;
+    }
+    .TextInput-el {
+      padding: .5rem 0;
+    }
+  }
+
+  &.TextInput-size-sm {
+    .TextInput-label,
+    .TextInput-el {
+      padding: .25rem 0;
+      font-size: 12px;
+      line-height: 2;
+    }
+    .TextInput-suffix,
+    .TextInput-prefix {
+      font-size: 12px;
+      line-height: 2;
+    }
+  }
+
+  &.TextInput-variant-contained {
+    background-color: $background-contained;
+    border-radius: $border-radius-default;
+
+    &:focus-within {
+      background-color: $background-contained-focus;
+      box-shadow: inset 0 0 0 2px $border-control-focus;
+    }
+
+    // Horizontal spacing for contained
+    &.TextInput-size-md {
+      padding: 0 .5rem;
+    }
+
+    &.TextInput-size-sm {
+      padding: 0 .5rem;
+    }
+  }
+
+  &.TextInput-variant-underlined {
+    &.TextInput-active {
+      &::after {
+        background: $border-underline-active;
+        transform: scaleY(2);
+      }
+    }
+
+    &:focus-within {
+      &::after {
+        background: $border-underline-focus;
+        transform: scaleY(2);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      left: 0;
+      right: 0;
+      background: $border-underline;
+      transition: all 0.3s ease-in-out;
+      transform-origin: 100% 100%;
+    }
+
+    &.TextInput-disabled {
+      &::after {
+        background: transparent;
+        border-bottom: 1px dashed $border-underline;
+      }
+    }
+  }
+
+  &.TextInput-disabled {
+    opacity: 0.5;
+  }
+
+  .TextInput-label {
+    display: block;
+    white-space: nowrap;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    color: $text-color-label;
+  }
+
+  .TextInput-suffix,
+  .TextInput-prefix {
+    display: contents;
+    font-size: 1rem;
+    line-height: 1em;
+    padding: 0.5rem 0;
+  }
+
+  .TextInput-el {
+    border: none;
+    position: relative;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: transparent;
+
+    &:disabled {
+      background-color: $background-text-input-element;
+    }
+
+    &::placeholder {
+      color: $text-color-placeholder;
+    }
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}

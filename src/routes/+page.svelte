@@ -1,9 +1,82 @@
 <script lang="ts">
   import Btn from '$lib/components/SimpleButton/SimpleButton.svelte';
+  import TextInput from '$lib/kit/TextInput/TextInput.svelte';
 </script>
 
 <div class="container">
   <h1>Dynamic Button Component</h1>
+</div>
+
+
+
+<div class="container">
+  <h2>Text Input</h2>
+
+  <div style='margin-bottom: 1rem;'>
+    <label for="input-1">
+      <span style='display: block; margin-bottom: .5rem;'>Label</span>
+      <TextInput
+        variant='contained'
+        type='text'
+        placeholder='Placeholder'
+        id='input-1'
+      >
+      </TextInput>
+  </label>
+  </div>
+
+  <div style='margin-bottom: 1rem;'>
+    <TextInput
+      variant='contained'
+      type='text'
+      label='Enter text'
+      placeholder='Placeholder'
+      size='sm'
+    >
+      <i class="ri-chat-2-fill" slot='prefix' />
+    </TextInput>
+  </div>
+
+  <div style='margin-bottom: 1rem;'>
+    <TextInput
+      variant='underlined'
+      type='text'
+      label='Enter text'
+      placeholder='Placeholder'
+      size='sm'
+    >
+      <i class="ri-chat-2-fill" slot='prefix' />
+    </TextInput>
+  </div>
+
+  <div style='margin-bottom: 1rem;'>
+    <TextInput
+      variant='underlined'
+      type='text'
+      label='Enter text'
+      placeholder='Placeholder'
+      size='md'
+    >
+      <i class="ri-chat-2-fill" slot='prefix' />
+    </TextInput>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h2>Text Input</h2>
+  <TextInput
+    variant='contained'
+    type='text'
+    label='Enter text'
+    placeholder='Placeholder'
+
+  >
+    <i class="ri-chat-4-line" slot="prefix" />
+    <i class="ri-arrow-right-line" slot="suffix" />
+    
+  </TextInput>
 </div>
 
 
@@ -87,6 +160,8 @@
 
 
 <style>
+  @import '../lib/kit/global.css';
+  
   .container {
     max-width: 800px;
     padding: 4rem 0;
