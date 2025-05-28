@@ -60,44 +60,44 @@
 
 // Primary contained
 :global(.SimpleButton.SimpleButton--theme--primary.SimpleButton--variant--contained) {
-  --background: #FFCC13;
-  --hoverBackground: #eebc0e;
-  --activeBackground: #e1b308;
+  --background: var(--bg-primary-200);
+  --hoverBackground: var(--bg-primary-300);
+  --activeBackground: var(--bg-primary-300);
   --borderColor: transparent;
-  --color: #26272B;
-  --hoverColor: #26272B;
-  --focusColor: #e1b308;
+  --color: var(--text-base-100);
+  --hoverColor: var(--text-base-100);
+  --focusColor: var(--bg-primary-200);
 }
 
 // Primary outlined
 :global(.SimpleButton.SimpleButton--theme--primary.SimpleButton--variant--outlined) {
   --background: transparent;
-  --hoverBackground: #f8f1d6;
-  --activeBackground: #f7ebba;
-  --borderColor: #FFCC13;
-  --color: #26272B;
-  --hoverColor: #26272B;
-  --focusColor: #fbd13c;
+  --hoverBackground: var(--bg-primary-100);
+  --activeBackground: var(--bg-primary-150);
+  --borderColor: var(--line-primary-100);
+  --color: var(--text-base-100);
+  --hoverColor: var(--text-base-100);
+  --focusColor: var(--bg-primary-200);
 }
 
 // Secondary contained
 :global(.SimpleButton.SimpleButton--theme--secondary.SimpleButton--variant--contained) {
-  --background: #F3F6F8;
-  --hoverBackground: #EBEEF0;
-  --activeBackground: #E3E6E8;
-  --borderColor: #E3E6E8;
-  --color: #272D34;
-  --hoverColor: #272D34;
-  --focusColor: #ccd2d6;
+  --background: var(--bg-base-200);
+  --hoverBackground: var(--bg-base-300);
+  --activeBackground: var(--bg-base-400);
+  --borderColor: var(--line-base-100);
+  --color: var(--text-base-100);
+  --hoverColor: var(--text-base-100);
+  --focusColor: var(--bg-base-200);
 }
 
 // Secondary outlined
 :global(.SimpleButton.SimpleButton--theme--secondary.SimpleButton--variant--outlined) {
   --background: transparent;
-  --hoverBackground: #F3F6F8;
-  --activeBackground: #EBEEF0;
-  --borderColor: #C1CAD0;
-  --color: #272D34;
-  --hoverColor: #272D34;
-  --focusColor: #ccd2d6;
+  --hoverBackground: var(--bg-base-200);
+  --activeBackground: var(--bg-base-300);
+  --borderColor: var(--line-base-100);
+  --color: var(--text-base-100);
+  --hoverColor: var(--text-base-100);
+  --focusColor: var(--bg-base-300);
 }

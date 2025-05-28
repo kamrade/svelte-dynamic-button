@@ -20,9 +20,25 @@
         type='text'
         placeholder='Placeholder'
         id='input-1'
+        size='lg'
       >
+        <i class="ri-arrow-right-s-line" slot="suffix" />
       </TextInput>
-  </label>
+    </label>
+  </div>
+
+  <div style='margin-bottom: 1rem;'>
+    <label for="input-1">
+      <span style='display: block; margin-bottom: .5rem;'>Label</span>
+      <TextInput
+        variant='contained'
+        type='text'
+        placeholder='Placeholder'
+        id='input-1'
+      >
+        <i class="ri-arrow-right-s-line" slot="suffix" />
+      </TextInput>
+    </label>
   </div>
 
   <div style='margin-bottom: 1rem;'>
