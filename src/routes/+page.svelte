@@ -106,6 +106,7 @@
   <Btn props={{ iconButton: true, loading: true }}>
     <i class="ri-inbox-fill" slot="prefix" />
   </Btn>
+  
 </div>
 
 
@@ -135,7 +136,7 @@
 
 
 <div class="container">
-  <h2>Simple default small</h2>
+  <h2>Simple default medium</h2>
 
   <Btn props={{ disabled: true }}>
     <i class="ri-inbox-fill" slot="prefix" />
@@ -154,6 +155,13 @@
     <i class="ri-arrow-right-fill" slot="suffix" />
     <b>Main action</b>
   </Btn>
+
+  <div style="margin: .5rem 0;">
+    <Btn props={{ theme: 'primary', block: true }}>
+      <i class="ri-arrow-right-fill" slot="suffix" />
+      <b>Main action</b>
+    </Btn>
+  </div>
 
 </div>
 
