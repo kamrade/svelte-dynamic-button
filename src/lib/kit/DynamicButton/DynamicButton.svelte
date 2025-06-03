@@ -43,6 +43,7 @@
     isLoading = props ? props.loading : loading;
     clickHandler = props ? props.onClick : onClick;
     isDisabled = props ? props.disabled : disabled;
+    type = props ? props.type : type;
 
     buttonClassName = props
       ? getClassNames(props)
